@@ -52,6 +52,7 @@ android:layout_below="@id/txt1"
           android:layout_height="match_parent"
          android:background="@color/white"
          android:padding="5dp"
+          android:id="@+id/email"
          android:hint="Email / Phone / UserName"/>
 
    </androidx.cardview.widget.CardView>
@@ -72,6 +73,7 @@ android:layout_below="@id/txt1"
           android:layout_height="match_parent"
           android:background="@color/white"
           android:padding="5dp"
+          android:id="@+id/password"
           android:hint="Password"/>
 
    </androidx.cardview.widget.CardView>

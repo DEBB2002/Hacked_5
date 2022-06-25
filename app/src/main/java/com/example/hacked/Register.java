@@ -85,6 +85,11 @@ public class Register extends AppCompatActivity {
 
 
                                 }
+                                else{
+                                    progressDialog.dismiss();
+                                    Toast.makeText( Register.this,"Bello",Toast.LENGTH_SHORT ).show();
+                                }
+
                             }
                         } );
 
