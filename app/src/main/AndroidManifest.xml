@@ -12,8 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hacked">
         <activity
-            android:name=".Buisness_Registration"
+            android:name=".Book_a_guide"
             android:exported="false" />
+        <activity
+            android:name=".Select_Buisness"
+            android:exported="false" />
+        <activity
+            android:name=".Buisness_Registration"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Buisness_Login"
             android:exported="false" />
@@ -37,13 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".Register"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Login"
             android:exported="true" />
