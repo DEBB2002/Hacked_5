@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "274058667656",
+    "project_id": "hacked-7d6ce",
+    "storage_bucket": "hacked-7d6ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274058667656:android:1cd2323c09372d00f9e13d",
+        "android_client_info": {
+          "package_name": "com.example.hacked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274058667656-a6o9gl80a6aitodmlu0llkmoq30qffqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hacked",
+            "certificate_hash": "a57b4c92ca63ea3258ad5552351ee19160e46deb"
+          }
+        },
+        {
+          "client_id": "274058667656-3irovnrtrkp1q2i5mvkj3987jtmaj21m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7TD6tdiosCsJ2OoInoOL2NF4XRdWK3yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274058667656-3irovnrtrkp1q2i5mvkj3987jtmaj21m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
