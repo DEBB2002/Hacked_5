@@ -1,15 +1,15 @@
 package com.example.hacked;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,21 +28,22 @@ public class Register extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
+    CheckBox guidecheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_register );
 
-        name=findViewById( R.id.fname );
-        email=findViewById( R.id.email );
-        password=findViewById( R.id.pasword);
+        name = findViewById( R.id.fname );
+        email = findViewById( R.id.email );
+        password = findViewById( R.id.pasword );
         progressDialog = new ProgressDialog( this );
         progressDialog.setMessage( "Please Wait" );
         progressDialog.setCancelable( false );
         firebaseDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
-        submit=findViewById( R.id.reg_btn );
+        submit = findViewById( R.id.reg_btn );
 
         submit.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -58,13 +59,8 @@ public class Register extends AppCompatActivity {
         } );
 
 
-
-
-
-
-
-
     }
+
     private void Register(String name, String email1, String password1) {
         if (email1 != null && password1 != null) {
             mAuth.createUserWithEmailAndPassword( email1, password1 ).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
@@ -73,26 +69,42 @@ public class Register extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Toast.makeText( Register.this, "User Created Successfully", Toast.LENGTH_SHORT ).show();
                         DatabaseReference databaseReference = firebaseDatabase.getReference().child( "Users" ).child( mAuth.getUid() );
+
                         Users users = new Users( mAuth.getUid(), name, email1 );
-                        databaseReference.push().setValue( users ).addOnCompleteListener( new OnCompleteListener<Void>() {
+                        databaseReference.setValue( users ).addOnCompleteListener( new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    progressDialog.dismiss();
+
 
                                     Toast.makeText( Register.this, "User Created data stored", Toast.LENGTH_SHORT ).show();
-                                    startActivity( new Intent(Register.this,Login.class) );
+                                    // startActivity( new Intent(Register.this,Login.class) );
 
 
-                                }
-                                else{
+                                } else {
                                     progressDialog.dismiss();
-                                    Toast.makeText( Register.this,"Bello",Toast.LENGTH_SHORT ).show();
+                                    Toast.makeText( Register.this, "Bello", Toast.LENGTH_SHORT ).show();
                                 }
 
                             }
                         } );
+                        DatabaseReference databaseReference1 = firebaseDatabase.getReference().child( "Guide" ).child( mAuth.getUid() );
+                        Users users1 = new Users( mAuth.getUid(), name, email1 );
+                        databaseReference1.setValue( users1 ).addOnCompleteListener( new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    progressDialog.dismiss();
+                                    Toast.makeText( Register.this, "Guide Created data stored", Toast.LENGTH_SHORT ).show();
 
+
+                                } else {
+
+                                    progressDialog.dismiss();
+                                    Toast.makeText( Register.this, "Bello", Toast.LENGTH_SHORT ).show();
+                                }
+                            }
+                        } );
                     }
                 }
             } );

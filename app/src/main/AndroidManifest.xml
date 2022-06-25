@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hacked">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,29 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hacked">
         <activity
+            android:name=".Buisness_Registration"
+            android:exported="false" />
+        <activity
+            android:name=".Buisness_Login"
+            android:exported="false" />
+        <activity
+            android:name=".Business"
+            android:exported="false" />
+        <activity
+            android:name=".MyAccount"
+            android:exported="false" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity
             android:name=".Places"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".User_Type"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".Register"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".Login"

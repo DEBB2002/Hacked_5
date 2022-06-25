@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".Buisness_Registration">
 
 
     <ImageView
@@ -26,7 +26,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="Sign Up"
+        android:text="Sign Up  (Buisness)"
         android:textColor="@color/black"
         android:textSize="30sp" />
 
@@ -70,54 +70,12 @@
         android:orientation="horizontal"
         android:weightSum="1">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginVertical="2dp"
 
-
-            android:layout_marginLeft="1dp"
-            android:layout_weight="0.48"
-
-            app:cardCornerRadius="12dp">
-
-            <EditText
-                android:id="@+id/fname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:hint="First Name"
-                android:padding="5dp" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.04" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="2dp"
-
-
-            android:layout_marginRight="1dp"
-            android:layout_weight="0.48"
-
-            app:cardCornerRadius="12dp">
-
-            <EditText
-                android:id="@+id/lname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:hint="Last Name"
-                android:padding="5dp" />
-
-
-        </androidx.cardview.widget.CardView>
+            android:spinnerMode="dropdown"/>
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -139,13 +97,13 @@
             android:hint="Password"/>
 
     </androidx.cardview.widget.CardView>
-<CheckBox
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:layout_below="@id/passwordcard"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"
-    android:id="@+id/guidecheck"/>
+    <CheckBox
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/passwordcard"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/guidecheck"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -215,5 +173,10 @@
         android:text="Don't Have a Account?Create One"
         android:textColor="@color/black"
         android:textSize="15sp" />
+
+
+
+
+
 
 </RelativeLayout>
