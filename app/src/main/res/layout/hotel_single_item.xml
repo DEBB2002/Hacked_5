@@ -91,7 +91,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
-                    android:text="ghroilskndsiwie ioeflsdiertyuiolfdcvbnmuytrdcvbnmjtrvbnm,kiuytfvbnmliuytrfbnmliuytfgnmwefiosd;lk;iglkdsfio;efjdf;iejf isdflsfslfsfjsd dfklslfjsidrjdf dfhggggggggggggggggieeksssssskkkkkkkkkkkkkdffsllsf"
+                    android:text="Kedarnath is a town in Rudraprayag district in the state of Uttarakhand in India and has gained importance because of the Kedarnath Temple. It is approximately 86 kilometres from Rudraprayag, the district headquarter."
                     android:textColor="@color/black"
                     android:textSize="15sp" />
                 <TextView
