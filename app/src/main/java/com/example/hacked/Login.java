@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 
@@ -51,7 +52,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {progressDialog.dismiss();
-                            startActivity( new Intent(Login.this,MainActivity.class) );}
+                            startActivity( new Intent(Login.this,Dashboard.class) );}
                         else{
                             Toast.makeText( getApplicationContext(), "Login FAiled Check Credentials", Toast.LENGTH_SHORT ).show();
                         }}
@@ -70,5 +71,17 @@ public class Login extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null) {
+            // No user is signed in
+        } else {
+            // User logged in
+            Intent i=new Intent( getBaseContext(),Dashboard.class );
+            startActivity( i );
+        }
     }
 }

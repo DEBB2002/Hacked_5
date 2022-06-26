@@ -139,23 +139,7 @@
             android:hint="Password"/>
 
     </androidx.cardview.widget.CardView>
-<CheckBox
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:layout_below="@id/passwordcard"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"
-    android:id="@+id/guidecheck"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordcard"
-        android:layout_toRightOf="@id/guidecheck"
-        android:layout_marginLeft="10dp"
-        android:text="Want to be a guide?"
-        android:textColor="@color/black"
 
-        android:layout_marginTop="15dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reg_btn"

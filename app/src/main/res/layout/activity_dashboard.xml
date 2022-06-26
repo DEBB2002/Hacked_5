@@ -16,19 +16,21 @@
 
         <ImageView
             android:id="@+id/pro_img"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/man" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@id/pro_img"
-            android:text="Hii Deb"
+android:textAllCaps="true"
+            android:text="Uttara"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -64,7 +66,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/yamuntori_view">
 
 
                     <androidx.cardview.widget.CardView
@@ -82,7 +85,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@drawable/kedarnatha" />
+                            android:src="@drawable/yamunotri" />
 
 
                     </androidx.cardview.widget.CardView>
@@ -95,31 +98,12 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Kedarnath"
+                        android:text="Yamunotri"
                         android:textColor="@color/black"
                         android:textSize="23sp" />
 
 
-                    <ImageView
-                        android:id="@+id/cloudimg"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/cloud" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_toLeftOf="@id/cloudimg"
-                        android:text="32°C"
-                        android:textColor="@color/black"
-                        android:textSize="23sp" />
 
                 </RelativeLayout>
 
@@ -137,7 +121,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/gantori_view">
 
 
                     <androidx.cardview.widget.CardView
@@ -155,7 +140,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@drawable/kedarnatha" />
+                            android:src="@drawable/gangotri" />
 
 
                     </androidx.cardview.widget.CardView>
@@ -168,31 +153,12 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Kedarnath"
+                        android:text="Gangotri"
                         android:textColor="@color/black"
                         android:textSize="23sp" />
 
 
-                    <ImageView
-                        android:id="@+id/cloudimg1"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/cloud" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_toLeftOf="@id/cloudimg1"
-                        android:text="32°C"
-                        android:textColor="@color/black"
-                        android:textSize="23sp" />
 
                 </RelativeLayout>
 
@@ -210,7 +176,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/kedarnath_view">
 
 
                     <androidx.cardview.widget.CardView
@@ -246,26 +213,6 @@
                         android:textSize="23sp" />
 
 
-                    <ImageView
-                        android:id="@+id/cloudimg2"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/cloud" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_toLeftOf="@id/cloudimg2"
-                        android:text="32°C"
-                        android:textColor="@color/black"
-                        android:textSize="23sp" />
 
                 </RelativeLayout>
 
@@ -282,7 +229,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/badrinath_view">
 
 
                     <androidx.cardview.widget.CardView
@@ -300,7 +248,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@drawable/kedarnatha" />
+                            android:src="@drawable/badrinath" />
 
 
                     </androidx.cardview.widget.CardView>
@@ -313,29 +261,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Kedarnath"
-                        android:textColor="@color/black"
-                        android:textSize="23sp" />
-
-
-                    <ImageView
-                        android:id="@+id/cloudimg3"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/cloud" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_toLeftOf="@id/cloudimg3"
-                        android:text="32°C"
+                        android:text="Badrinath"
                         android:textColor="@color/black"
                         android:textSize="23sp" />
 
@@ -343,9 +269,19 @@
 
 
             </androidx.cardview.widget.CardView>
-
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp"
+    android:text="Uttarakhand, also known as Devbhoomi or the Land of Gods, is home to numerous temples and welcomes devotees all year round. Among the countless religious sites and circuits that devotees visit in Uttarakhand, one of the most prominent is the Char Dham Yatra. This Yatra or pilgrimage is a tour of four holy sites - Yamunotri, Gangotri, Kedarnath and Badrinath
+\n \n It is believed that one should complete the Char Dham Yatra in a clockwise direction. Hence, the pilgrimage starts from Yamunotri, proceeds towards Gangotri, onto Kedarnath, and finally ends at Badrinath. . Some devotees even do a Do Dham Yatra or a pilgrimage to two shrines - Kedarnath and Badrinath."
+android:textColor="@color/black"/>
         </LinearLayout>
+
+
+
+
 
 
     </ScrollView>
